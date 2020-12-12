@@ -1,0 +1,116 @@
+body, html {
+	font-family: 'Roboto', sans-serif;
+	background-image: linear-gradient(to right, #478ac9, #65cddd);
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #ffffff;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bbbbbb;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bbbbbb;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bbbbbb;
+}
+
+.spacer {
+	height: 100px;
+	display: block;
+}
+
+.spacer-50 {
+	height: 50px;
+	display: block;
+}
+
+.spacer-25 {
+	height: 25px;
+	display: block;
+}
+
+#lge-main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#lge-description {
+	background-image: url('../img/bg-lottery-pattern.png');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.lge-card {
+	background-color: rgba(0,0,0,0.5);
+	padding: 30px 20px;
+	display: none;
+}
+
+.lge-card[data-card-type="countdown"] {
+	display: block;
+}
+
+.lge-card .progress {
+	width: 500px;
+	max-width: 100%;
+	margin: auto;
+}
+
+.lge-card .progress .progress-bar {
+	background-color: 4c96cd;
+}
+
+.smalltext {
+	font-size: 0.75em;
+}
+
+.input-rounded-left {
+	background-color: #ffffff;
+	color: #000000;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	display: inline-block;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px;
+    font-size: 18px;
+	width: 200px;
+	max-width: 48%;
+}
+
+.btn-lge {
+	color: #ffffff;
+	background-color: #000000;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px;
+    font-size: 18px;
+	width: 200px;
+	max-width: 48%;
+}
+
+#infoModal .modal-content {
+	border-radius: 0;
+	background-color: rgba(22,163,193,0.90);
+}
+
+#infoModal .close > span {
+	color: #ffffff;
+	text-shadow: none;
+}
