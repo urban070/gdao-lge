@@ -1,0 +1,363 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+		<meta name="keywords" content="Governor, DAO, Governor DAO, LGE, Cryptocurrency, Crypto, Decentralized, Decentralized Autonomous Organization, Bitcoin, Ethereum, Aaragon, xdai, ERC20, ERC677, Chainlink, CBDAO, CBDAO Replacement, Resurrection, Airdrop">
+		<meta name="description" content="Governor DAO is a decentralized autonomous organization, that was developed and built for the people by people to provide a governance platform that gives the people a true voice of world governance that is supplied by the community of the world.">
+		<title>Governor DAO - Liquidity Generation Event</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="nicepage.css" media="screen">
+		<link rel="stylesheet" href="Governor-DAO.css" media="screen">
+		<script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+		<script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+		<link rel="icon" href="https://governordao.org/images/favicon.png">
+		<meta property="og:title" content="Governor DAO - Liquidity Generation Event">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="Governor DAO is a decentralized autonomous organization, that was developed and built for the people by people to provide a governance platform that gives a true voice of world governance that is supplied by the community of the world. ">
+
+	</head>
+	<body>
+		<div class="container-fluid">
+			<a href="https://governordao.org" class="d-block" style="color: #ffffff; padding: 15px;">&lt; Back to main page</a>
+		</div>
+		<div class="container-fluid font-secondary" id="lge-main">
+			<div class="container">
+				<img src="img/gdao-logo.png" style="display: block; margin: auto; width: 300px; max-width: 100%;" alt="gDAO"/>
+				<center>
+					<h1 style="text-shadow: 1px 1px 2px black;" >Liquidity Generation Event</h1> 
+				</br>
+					<a href="https://etherscan.io/address/0x1ddad8dfb4cb86ded31c1118e600a398c417c4b0#code" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-text-black u-text-hover-white u-white u-btn-1" data-animation-name="flash" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" title="Click here to check the contract on Etherscan">CHECK CONTRACT</a>
+				<div class="spacer-25"></div>
+				<div class="row">
+					<div class="col-12 lge-card" data-card-type="countdown">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 id="countdownToStart">0:0:0:0</h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 lge-card" data-card-type="lge">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h1 id="countdownToEnd"></h1>
+								<h2>Raised ETH: <span class="raisedETH">-</span> / <span class="hardCap">300</span></h2>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" id="lge-progress" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="300"></div>
+								</div>
+								<div class="spacer-50"></div>
+							</div>
+						</div>
+						<div class="row" id="walletConnected" style="display: none;">
+							<div class="col-12 col-md-3 offset-md-3 text-center">
+								<h6>Connected wallet</h6>
+								<h5><span class="connectedWallet">-</span></h5>
+							</div>
+							<div class="col-12 col-md-3 text-center">
+								<h6>Your ETH balance</h6>
+								<h5><span class="connectedWalletBalance">-</span> ETH</h5>
+							</div>
+							<div class="col-12 col-xl-6 offset-xl-3 text-center" id="crowdsaleForm">
+								<div class="spacer-25"></div>
+								<input id="crowdsaleETHValue" class="input-rounded-left" type="number" min="0" max="25" step="any" placeholder="0 ETH"/>
+								<button id="enterCrowdsale" class="btn-lge">Enter crowdsale</button>
+								<div class="spacer-25"></div>
+							</div>
+						</div>
+						<div class="row" id="walletNotConnected" style="display: block;">
+							<div class="col-12 text-center">
+								<a href="" class="btn btn-dark" id="connectWallet">Connect to MetaMask</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 lge-card" data-card-type="lge-finished">
+						<div class="row">
+							<div class="col-12 text-center">
+								<div class="spacer-25"></div>
+								<h2>The Liquidity Generation Event has concluded. Thank you for participation.</h2>
+								<div class="spacer-25"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" tabindex="-1" role="dialog" id="infoModal">
+			<div class="modal-dialog align-self-center" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Alert</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" style="word-break: break-word;">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.0/web3.min.js"></script>
+
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script type="text/javascript">
+
+		//--  CONFIGURATION  --//
+		var crowdsaleABI = [{"inputs":[{"internalType":"uint256","name":"rate","type":"uint256"},{"internalType":"address payable","name":"wallet","type":"address"},{"internalType":"contract IERC20","name":"token","type":"address"},{"internalType":"uint256","name":"openingTime","type":"uint256"},{"internalType":"uint256","name":"closingTime","type":"uint256"},{"internalType":"uint256","name":"cap","type":"uint256"},{"internalType":"uint256","name":"individualCap","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"account","type":"address"}],"name":"CapperAdded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"account","type":"address"}],"name":"CapperRemoved","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"prevClosingTime","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newClosingTime","type":"uint256"}],"name":"TimedCrowdsaleExtended","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"purchaser","type":"address"},{"indexed":true,"internalType":"address","name":"beneficiary","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"TokensPurchased","type":"event"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"constant":false,"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"addCapper","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address[]","name":"beneficiary","type":"address[]"}],"name":"addManyWhitelist","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"addWhitelist","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"buyTokens","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"cap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"capReached","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"closingTime","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"getCap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"getContribution","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"hasClosed","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"isCapper","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"isOpen","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"isWhitelisted","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"openingTime","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"rate","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"removeWhitelist","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"renounceCapper","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"beneficiary","type":"address"},{"internalType":"uint256","name":"cap","type":"uint256"}],"name":"setCap","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"token","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"wallet","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"weiRaised","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}];
+		var crowdsaleContractAddress = "0x1ddad8dfb4cb86ded31c1118e600a398c417c4b0";
+
+		var userAccountAddress = '0x0000000000000000000000000000000000000000';
+		var userETHBalance = 0;;
+
+		var crowdsaleCap = 300;
+		var crowdsaleStartTime = 0;
+		var crowdsaleRaised = 0;
+		var averageBlockTime = 0;
+		var isMetaMask = false;
+
+		async function init() {
+			var _crowdsaleContract = await new web3.eth.Contract(crowdsaleABI, crowdsaleContractAddress, {from: userAccountAddress});
+			_crowdsaleContract.methods.cap().call().then(_cap => {
+				crowdsaleCap = web3.utils.fromWei(_cap, 'ether');
+				$(".hardCap").text(crowdsaleCap.toString());
+			}).catch(console.log);
+			_crowdsaleContract.methods.openingTime().call().then(_openingTime => {
+				crowdsaleStartTime = _openingTime;
+			}).catch(console.log);
+
+
+			return _crowdsaleContract;
+		}
+
+		async function metamaskIntegration() {
+
+			if (typeof window.ethereum !== 'undefined') { // Modern dapp browsers
+				window.web3 = new Web3(window.ethereum);
+				ethereum.autoRefreshOnNetworkChange = false;
+				try {
+					metaMask = false;
+					ethereum.enable().then(x => {
+						metaMask = true;
+						isMetaMask = true;
+						$('#walletConnected').show();
+						$('#walletNotConnected').hide();
+					});
+
+				} catch (error) {
+					metaMask = false;
+					popupInfo("Error", "Connect to metamask");
+				}
+			} else if (typeof window.web3 !== 'undefined') { // Legacy dapp browsers
+				metaMask = true;
+				isMetaMask = true;
+				window.web3 = new Web3(web3.currentProvider);
+			} else { // Non - dapp browsers
+				metaMask = false;
+				window.web3 = new Web3("https://mainnet.infura.io/v3/eaf3d71a26184ccd8fbf7c1c1136cf6b");
+				popupInfo("Error", "Non-Ethereum browser detected. You should consider using MetaMask.");
+			}
+
+			await web3.eth.getAccounts(function (error, result) {
+				if (!error) {
+					accounts = result;
+				} else {
+					console.error(error);
+				}
+			});
+		}
+
+		async function getNetwork() {
+			var net = await web3.eth.net.getNetworkType();
+			if (net == "main") {
+				$('.connectedWallet').text(accounts[0].substring(0, 6) + '...' + accounts[0].substring(36, 42));
+				web3.eth.getBalance(accounts[0]).then(balance => {
+					$('.connectedWalletBalance').text(web3.utils.fromWei(balance, 'ether').substring(0, 10));
+				}).catch(console.log);
+			}
+		}
+
+		function getCrowdsaleData() {
+			init().then(C => {
+				var crowdsaleContract = C;
+				crowdsaleContract.methods.weiRaised().call().then(_crowdsaleRaised => {
+					crowdsaleRaised = web3.utils.fromWei(_crowdsaleRaised, 'ether');
+					$(".raisedETH").text(crowdsaleRaised.toString().substring(0,6));
+					var percentageCapFilled = (Math.round((crowdsaleRaised/300) * 100)) + '%';
+					$('#lge-progress').attr('aria-valuenow', crowdsaleRaised).attr('aria-valuemax', crowdsaleCap).css('width', percentageCapFilled);
+				}).catch(console.log);
+				$('.connectedWallet').text(accounts[0].substring(0, 6) + '...' + accounts[0].substring(36, 42));
+				web3.eth.getBalance(accounts[0]).then(balance => {
+					$('.connectedWalletBalance').text(web3.utils.fromWei(balance, 'ether').substring(0, 10));
+				}).catch(console.log);
+				crowdsaleContract.methods.hasClosed().call().then(hasClosed => {
+					if(hasClosed) {
+						$('[data-card-type="lge-finished"]').show();
+						$('[data-card-type="lge"]').hide();
+						$('[data-card-type="countdown"]').hide();
+					}
+				}).catch(console.log);
+
+			}).catch(console.log);
+		}
+
+		$(document).ready(function(){
+			metamaskIntegration().then(x => {
+				getNetwork();
+				getCrowdsaleData();
+				setInterval(function () {
+					getCrowdsaleData();
+				}, 20000);
+				window.ethereum.on('accountsChanged', function (accounts) {
+					metamaskIntegration().then(x => {
+						getNetwork();
+						getCrowdsaleData();
+					});
+				});
+			});
+		});
+
+		//============================================================================================================
+
+		$('#connectWallet').click(function() {
+			metamaskIntegration();
+			getNetwork();
+		});
+
+		$("#enterCrowdsale").click(async function() {
+
+			var etherValue = $('#crowdsaleETHValue').val();
+			var weiValue = web3.utils.toWei(etherValue, 'ether');
+
+			if (typeof web3 !== 'undefined') {
+
+				web3.eth.getAccounts(async function(err, accounts){
+					var userAddress = accounts[0];
+
+					try {
+
+						init().then(C => {
+							var crowdsaleContract = C;
+							crowdsaleContract.methods.buyTokens(userAddress).send({
+								from: userAddress,
+								value: weiValue
+							}).on('error', function (error) {
+								popupInfo("Transaction Failed", "Transaction was not successful: <i>" + error.message + "</i>");
+							}).on('transactionHash', function (transactionHash) {
+								popupInfo("Transaction Recorded", "Your entry has been recorded. <br><br><a target='_blank' style='color: #c1c1c1;' href='https://etherscan.io/tx/"+transactionHash+"' >Check Your TX status on Etherscan</a>");
+							}).on('confirmation', function (confirmationNumber, receipt) {
+								popupInfo("Transaction Confirmed", "Congratulations! Your transaction is now confirmed and you've received synthetic LP tokens.");
+							});
+
+						}).catch(console.log);
+
+					} catch(e){
+						console.log(e);
+						popupInfo("Error", e);
+					}
+				});
+			} else {
+				popupInfo("Error", "Metamask is not connected.");
+			}
+		});
+
+		function truncateAddress(fullStr, strLen, separator) {
+			if (fullStr.length <= strLen) return fullStr;
+
+			separator = separator || '...';
+
+			var sepLen = separator.length,
+			charsToShow = strLen - sepLen,
+			frontChars = Math.ceil(charsToShow/2),
+			backChars = Math.floor(charsToShow/2);
+
+			return fullStr.substr(0, frontChars) + separator + fullStr.substr(fullStr.length - backChars);
+		};
+
+		function popupInfo(title, content) {
+			$('#infoModal').modal('hide');
+			$('#infoModal .modal-title').html(title);
+			$('#infoModal .modal-body').html(content);
+			$('#infoModal').modal('show');
+		}
+
+		$('#infoModal').on('hide.bs.modal', function (e) {
+			$('#infoModal').removeClass('d-flex');
+		});
+
+		$('#infoModal').on('show.bs.modal', function (e) {
+			$('#infoModal').addClass('d-flex');
+		});
+
+
+		var LGEStartCountdown = 1605574800000;
+		var LGEEndCountdown = 1605916800000;
+
+		var countdownInterval = setInterval(function() {
+			var now = new Date().getTime();
+			var distance = LGEStartCountdown - now;
+
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("countdownToStart").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+
+			if (distance < 0) {
+				clearInterval(countdownInterval);
+				document.getElementById("countdownToStart").innerHTML = "Crowdsale is live";
+				$('[data-card-type="lge"]').show();
+				$('[data-card-type="countdown"]').hide();
+			}
+		}, 1000);
+
+		var endCountdownInterval = setInterval(function() {
+			var now = new Date().getTime();
+			var distance = LGEEndCountdown - now;
+
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("countdownToEnd").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+
+			if (distance < 0) {
+				clearInterval(endCountdownInterval);
+				$('[data-card-type="lge-finished"]').show();
+				$('[data-card-type="lge"]').hide();
+				$('[data-card-type="countdown"]').hide();
+			}
+		}, 1000);
+
+		$(document).ready(function(){
+
+			$('#connectWallet').on('click', function(e){
+				e.preventDefault();
+			});
+
+			var now = new Date().getTime();
+
+			if(now > LGEStartCountdown) {
+				$('[data-card-type="lge"]').show();
+				$('[data-card-type="countdown"]').hide();
+			}
+			if(now > LGEEndCountdown) {
+				$('[data-card-type="lge-finished"]').show();
+				$('[data-card-type="lge"]').hide();
+				$('[data-card-type="countdown"]').hide();
+			}
+		});
+
+		</script>
+	</body>
+</html>
